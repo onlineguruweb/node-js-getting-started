@@ -19,7 +19,7 @@ router.get("/post/:id",getPost);
 
 router.post("/posts",PostMiddleware,storePost);
 
-router.post('/posts/:id',PostMiddleware,updatePost);
+router.put('/posts/:id',PostMiddleware,updatePost);
 
 router.delete("/post/:id",PostMiddleware,deletePost);
 

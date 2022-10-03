@@ -30,6 +30,7 @@ const PostModel = new PostSchema(
         }
         
     },
+    {collation:'users'},
     {
         timestamps:true
     }
