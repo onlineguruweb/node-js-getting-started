@@ -30,11 +30,13 @@ const PostModel = new PostSchema(
         }
         
     },
-    {collation:'users'},
+    
     {
         timestamps:true
     }
 );
+
+// {collation:'users'},
 
 module.exports = mongoose.model('posts',PostModel);
 

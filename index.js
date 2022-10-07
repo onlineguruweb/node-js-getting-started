@@ -6,10 +6,17 @@ const router = require("./routes/route");
 const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
+const {graphqlHTTP} = require('express-graphql');
+const PostSchema = require("./Schema/PostSchema");
 
 
 app.use(cors());
 app.use(express.json());
+
+app.use("/",graphqlHTTP({
+  schema:PostSchema,
+  graphiql:true
+}))
 
 app.use("/api",router)
 
